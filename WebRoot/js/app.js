@@ -158,6 +158,7 @@ Modernizr.addTest('ios7 ipad',function(){return!!navigator.userAgent.match(/iPad
     return true;
   }
 
+  //add bjax into jquery fn
   $.fn.bjax = function (option) {
     return this.each(function () {
       var $this   = $(this);
@@ -171,6 +172,7 @@ Modernizr.addTest('ios7 ipad',function(){return!!navigator.userAgent.match(/iPad
 
   $.fn.bjax.Constructor = Bjax
 
+  //bind popstate to control the history bottom  back right page
   $(window).on("popstate", function(e) {
     if (e.originalEvent.state !== null) {
       window.location.reload(true);
@@ -178,6 +180,7 @@ Modernizr.addTest('ios7 ipad',function(){return!!navigator.userAgent.match(/iPad
     e.preventDefault();
   });
 
+  //bind the click event in data-bjax or .nav-primary a'
   $(document).on('click.app.bjax.data-api', '[data-bjax], .nav-primary a', function (e) {
     if(!Bjax.prototype.enable(e)) return;    
     $(this).bjax({url: $(this).attr('href') || $(this).attr('data-url') });
