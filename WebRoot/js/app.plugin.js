@@ -1,3 +1,7 @@
+/**
+ * 前台通用js插件
+ * 
+ */
 +function ($) { "use strict";
 
   $(function(){
