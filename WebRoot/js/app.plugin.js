@@ -23,7 +23,7 @@
 	});
 	sparkline(false);
 
-	// easypie
+	// easypie    
 	var easypie = function(){
 	$('.easypiechart').each(function(){
 		var $this = $(this), 
