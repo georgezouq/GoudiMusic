@@ -5,11 +5,16 @@ package com.goudi.music.bean;
  * 
  */
 public class Music{
+    
 	private Long id;
 	private String musicName;
 	private String songer;
 	private String link;
 	private int hot;
+	private Singer singer;
+	private Album album;
+	
+	
 	public Long getId() {
 	    return id;
 	}
@@ -39,6 +44,18 @@ public class Music{
 	}
 	public void setHot(int hot) {
 	    this.hot = hot;
+	}
+	public Singer getSinger() {
+	    return singer;
+	}
+	public void setSinger(Singer singer) {
+	    this.singer = singer;
+	}
+	public Album getAlbum() {
+	    return album;
+	}
+	public void setAlbum(Album album) {
+	    this.album = album;
 	}
 
 }
